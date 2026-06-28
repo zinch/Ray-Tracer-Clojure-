@@ -14,3 +14,16 @@
       (is (= 1.0 (:w a)))
       (is (point? a))
       (is (not (vector? a))))))
+
+(deftest a-tuple-vector-test
+  (testing "A tuple with w=0.0 is a vector"
+    ;; Given
+    (let [a (tuple 4.3  -4.2  3.1  0.0)]
+
+      ;; Then
+      (is (= 4.3 (:x a)))
+      (is (= -4.2 (:y a)))
+      (is (= 3.1 (:z a)))
+      (is (= 0.0 (:w a)))
+      (is (not (point? a)))
+      (is (vector? a)))))
