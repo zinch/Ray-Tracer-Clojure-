@@ -11,4 +11,6 @@
       (is (= 4.3 (:x a)))
       (is (= -4.2 (:y a)))
       (is (= 3.1 (:z a)))
-      (is (= 1.0 (:w a))))))
+      (is (= 1.0 (:w a)))
+      (is (point? a))
+      (is (not (vector? a))))))

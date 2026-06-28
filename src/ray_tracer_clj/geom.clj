@@ -12,3 +12,10 @@
 
 (defn tuple [x y z w]
   (Tuple. (double-array [x y z w])))
+
+
+(defn point? [t]
+  (= 1.0 (:w t)))
+
+(defn vector? [t]
+  (= 0.0 (:w t)))
